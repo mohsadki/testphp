@@ -10,8 +10,13 @@
                 $password = "msedw";
 
                 // Create connection
-                $conn = new mysqli($servername, $username, $password);
-
+                // $conn = new mysqli($servername, $username, $password);
+                // redhat openshift mysql connection
+                echo "================";
+                echo $MYSQL_USER;
+                echo $MYSQL_PASSWORD;
+                echo "================";
+                $conn = new mysqli("localhost",$MYSQL_USER,$MYSQL_PASSWORD);
                 // Check connection
                 if ($conn->connect_error) {
                     echo "Connection failed !";
