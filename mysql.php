@@ -12,7 +12,7 @@
           // Create connection
           // $conn = new mysqli($servername, $username, $password);
           // redhat openshift mysql connection
-          echo "================<br>";
+          echo "=====aaaaaaa=====<br>";
           echo $MYSQL_USER;
           echo $MYSQL_PASSWORD;
 
