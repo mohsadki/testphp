@@ -5,7 +5,7 @@
 <body>
         <h3>test apache2 http server at openshift redhat cloud platform<h3>
           <?php
-          $servername = "localhost";
+          $servername = "172.30.19.227";
           $username = "msedw";
           $password = "msedw";
 
@@ -34,7 +34,7 @@
           echo getenv('OPENSHIFT_GEAR_NAME'); // Database name
 
           echo "================<br>";
-          $conn = new mysqli("localhost",$MYSQL_USER,$MYSQL_PASSWORD);
+          $conn = new mysqli("172.30.19.227","msedw","msedw");
           // Check connection
           if ($conn->connect_error) {
               echo "Connection failed !";
