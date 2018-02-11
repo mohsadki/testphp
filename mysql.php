@@ -1,6 +1,6 @@
 <html>
   <head>
-  <title>test mysql </title>
+  <title>test openshift mysql </title>
   </head>
   <body>
               <h3>test apache2 http server at openshift redhat cloud platform<h3>
@@ -16,7 +16,7 @@
                 echo $MYSQL_USER;
                 echo $MYSQL_PASSWORD;
                 echo "================";
-                $conn = new mysqli("localhost",$MYSQL_USER,$MYSQL_PASSWORD);
+                //$conn = new mysqli("localhost",$MYSQL_USER,$MYSQL_PASSWORD);
                 // Check connection
                 if ($conn->connect_error) {
                     echo "Connection failed !";
