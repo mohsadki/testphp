@@ -13,9 +13,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
+echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
 
-$sql = "select id, title, detail, ts from items";
-$result = $conn->query($sql);
+$sql = "select * from items";
+
+if ($result = mysqli_query($conn, $sql)) {
+    while ($row = mysqli_fetch_row($result)) {
+        printf("%s (%s,%s)\n", $row[0], $row[1], $row[2]);
+    }
+    /* free result set */
+    mysqli_free_result($result);
+}
+
+
+
+//$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
@@ -25,5 +37,5 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$mysqli->close();
+$conn->close();
 ?>
