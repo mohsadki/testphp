@@ -1,5 +1,5 @@
 <?php
-$mysqli = mysqli_connect(
+$conn = new mysqli(
     getenv('OPENSHIFT_MYSQL_DB_HOST'),
     getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
     getenv('OPENSHIFT_MYSQL_DB_HOST'),
@@ -7,7 +7,7 @@ $mysqli = mysqli_connect(
     getenv('OPENSHIFT_MYSQL_DB_PORT')
 );
 
-if ($mysqli->connect_error) {
+if ($conn->connect_error) {
     echo "Connection failed !";
     echo $conn->connect_error;
     die("Connection failed: " . $conn->connect_error);
@@ -15,7 +15,7 @@ if ($mysqli->connect_error) {
 echo "Connected successfully";
 
 $sql = "select id, title, detail, ts from items";
-$result = $mysqli->query($sql);
+$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
