@@ -5,7 +5,7 @@
 <body>
         <h3>MySQL<h3>
           <?php
-          $conn = new mysqli("172.30.24.45","userI4C","172.30.24.45","GSEAAHLQx1mP8nCy","3306");
+          $conn = new mysqli("mysql.p8.svc","usrmsed","mysql.p8.svc","paswmsed","3306");
           // Check connection
           if ($conn->connect_error) {
               echo "Connection failed !";
@@ -13,6 +13,7 @@
               die("Connection failed: " . $conn->connect_error);
           }
           echo "Connected successfully o yee";
+          echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
 
           ?>
 
