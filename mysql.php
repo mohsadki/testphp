@@ -5,10 +5,14 @@
 <body>
         <h3>MySQL<h3>
           <?php
-          $conn = new mysqli("mysql.p8.svc","usrmsed","mysql.p8.svc","paswmsed","3306");
+          $PHP_EOL = '<br>';
+          $conn = new mysqli("mysql.p8.svc","phpuser","mysql.p8.svc","phppasw","3306");
           // Check connection
           if ($conn->connect_error) {
-              echo "Connection failed !";
+              echo "Error: Unable to connect to MySQL." . PHP_EOL;
+              echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+              echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+              echo "Connection failed !" . PHP_EOL;
               echo $conn->connect_error;
               die("Connection failed: " . $conn->connect_error);
           }
