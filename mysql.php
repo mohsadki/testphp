@@ -6,7 +6,11 @@
         <h3>MySQL<h3>
           <?php
           $PHP_EOL = '<br>';
-          $conn = new mysqli("mysql.p8.svc","phpuser","mysql.p8.svc","phppasw","3306");
+          $conn = new mysqli(getenv('MYSQL_SERVICE_HOST'),
+                            getenv('MYSQL_USER'),
+                            getenv('MYSQL_SERVICE_HOST'),
+                            getenv('MYSQL_PASSWORD'),
+                            "3306");
           // Check connection
           if ($conn->connect_error) {
               echo "Error: Unable to connect to MySQL." . PHP_EOL;

@@ -5,7 +5,7 @@ $conn = mysqli_connect(
     getenv('MYSQL_USER'),
     getenv('MYSQL_SERVICE_HOST'),
     getenv('MYSQL_PASSWORD'),
-    getenv('OPENSHIFT_MYSQL_DB_PORT')
+    "3306"
 );
 
 if (!$conn) {
