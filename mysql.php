@@ -8,8 +8,8 @@
           $PHP_EOL = '<br>';
           $conn = new mysqli(getenv('MYSQL_SERVICE_HOST'),
                             getenv('MYSQL_USER'),
-                            getenv('MYSQL_SERVICE_HOST'),
                             getenv('MYSQL_PASSWORD'),
+                            getenv('MYSQL_DATABASE'),
                             "3306");
           // Check connection
           if ($conn->connect_error) {

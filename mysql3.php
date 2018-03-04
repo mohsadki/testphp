@@ -3,8 +3,8 @@ $PHP_EOL = '<br>';
 $conn = mysqli_connect(
     getenv('MYSQL_SERVICE_HOST'),
     getenv('MYSQL_USER'),
-    getenv('MYSQL_SERVICE_HOST'),
     getenv('MYSQL_PASSWORD'),
+    getenv('MYSQL_DATABASE'),
     "3306"
 );
 
