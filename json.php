@@ -16,7 +16,7 @@ if (!$conn) {
     //echo "Connected successfully" . PHP_EOL;
     //echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
     $sql = "select * from items";
-    int $i = 0;
+    $i = 0;
   if ($result = mysqli_query($conn, $sql)) {
       while ($row = mysqli_fetch_row($result)) {
           $json[$i]->id = $row[0];
