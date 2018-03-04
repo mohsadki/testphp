@@ -10,5 +10,6 @@
     <h5><a href="/mysql-info.php">mysql-info</a></h5>
     <h5><a href="/mysql-info3.php">mysql-info3</a></h5>
     <h5><a href="/mysql3.php">mysql3</a></h5>
+    <h5><a href="/json.php">json</a></h5>
   </body>
 </html>
