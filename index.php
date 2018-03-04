@@ -8,5 +8,7 @@
     <h4><a href="/mysql.php">mysql</a></h4>
     <h4><a href="/mysql2.php">mysql2</a></h4>
     <h5><a href="/mysql-info.php">mysql-info</a></h5>
+        <h5><a href="/mysql-info3.php">mysql-info</a></h5>
+            <h5><a href="/mysql3.php">mysql-info</a></h5>
   </body>
 </html>
