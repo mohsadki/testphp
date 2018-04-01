@@ -15,7 +15,7 @@ if (!$conn) {
 } else {
     $sql = "select * from items";
     $i = 0;
-    $json = new stdClass();
+    $json = new array();
   if ($result = mysqli_query($conn, $sql)) {
       while ($row = mysqli_fetch_row($result)) {
           $json[$i]->id = $row[0];
