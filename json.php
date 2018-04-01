@@ -15,9 +15,10 @@ if (!$conn) {
 } else {
     $sql = "select * from items";
     $i = 0;
-    $json = new array();
+    $json = array();
   if ($result = mysqli_query($conn, $sql)) {
       while ($row = mysqli_fetch_row($result)) {
+          $json[$i] = new stdClass(); //the magic
           $json[$i]->id = $row[0];
           $json[$i]->titr = $row[1];
           $json[$i]->det = $row[2];
