@@ -30,6 +30,7 @@ if (!$conn) {
   }
 }
 $myJSON = json_encode($json);
+header('Content-type: application/json');
 echo $myJSON;
 $conn->close();
 ?>
